@@ -18,7 +18,7 @@ console.log(" ... starting to generate avatas.")
     let image_url = 'https://crafatar.com/renders/body/'+player.uuid;
     //$(container_selector).first().append('<div id="player_images"></div>');
 
-    $(container_selector).append(`
+       $(container_selector).first().append(`
       <div class="player_info">
       <h3>${player.name}</h3>
       <img src='${image_url}'/>
