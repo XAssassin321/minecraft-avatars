@@ -1,5 +1,5 @@
 
-var container_selector = 'article';
+var container_selector = 'article[data-topic-id=350]';
 var players_name= [
     'MJRD1524',
     'XAssassin321'
