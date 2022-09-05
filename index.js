@@ -1,5 +1,5 @@
 
-var container_selector = '#player_images';
+var container_selector = 'article[data-post-id="350"]';
 var players_name= [
     'MJRD1524',
     'XAssassin321'
