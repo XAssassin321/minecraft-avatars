@@ -1,5 +1,5 @@
 
-var container_selector = 'article[data-post-id="350"]';
+var container_selector = 'article';
 var players_name= [
     'MJRD1524',
     'XAssassin321'
@@ -16,6 +16,8 @@ console.log(" ... starting to generate avatas.")
   player_name_id_object.forEach(function(player){
 
     let image_url = 'https://crafatar.com/renders/body/'+player.uuid;
+    //$(container_selector).first().append('<div id="player_images"></div>');
+
     $(container_selector).append(`
       <div class="player_info">
       <h3>${player.name}</h3>
@@ -93,7 +95,7 @@ async function main(){
     let player_name_id_array = await get_players_uuid(players_name);
     console.log(player_name_id_array);
     
-    generate_player_avatars('#player_images',player_name_id_array);
+    generate_player_avatars(container_selector,player_name_id_array);
     console.log('99 - after player_name_id_array');
 }
 
