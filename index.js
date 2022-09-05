@@ -13,12 +13,12 @@ Generate MC Players Avatars from UUID & append them to a HTML element by ID
 */
 function generate_player_avatars(container_selector,player_name_id_object){
 console.log(" ... starting to generate avatas.")
+$(container_selector).first().append('<div class="player-avatars-container"></div>');
   player_name_id_object.forEach(function(player){
 
     let image_url = 'https://crafatar.com/renders/body/'+player.uuid;
-    //$(container_selector).first().append('<div id="player_images"></div>');
 
-       $(container_selector).first().append(`
+    $(container_selector + " .player-avatars-container").first().append(`
       <div class="player_info">
       <h3>${player.name}</h3>
       <img src='${image_url}'/>
